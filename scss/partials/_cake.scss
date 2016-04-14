@@ -1,0 +1,121 @@
+.main {
+  background-color: #dddddd;
+  height: 720px;
+}
+
+.main_container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+div[class^="birthdaycake_"]{
+  float: left;
+  border: 1px solid red;
+}
+
+.birthdaycake_name {
+  width: 100%;
+  height: 200px;
+}
+
+.birthdaycake_result {
+  width: 70%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.birthdaycake_colours {
+  width: 30%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+.cake {
+  background-color: white;
+  border: $cakeBorder;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 4% 5% 0 5%;
+  box-shadow: $cakeShadow;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+
+@for $i from $layersAmount through 1 {
+  .layer_#{$i} {
+    width: $layerWidth;
+    height: $layerHeigth;
+    // background-image: url("../images/img-noise.png");
+    // background-repeat: repeat;
+    background-color: $layerColor;
+    border: $cakeBorder;
+    // box-shadow:  inset 1px 1px 4px 0px rgba(0,0,0,0.41);
+    margin-top: 3%;
+    border-radius: 10px;
+   }
+}
+
+.colours {
+  width: 100%;
+  height: auto;
+  padding: 3% 5% 0 5%;
+}
+
+@for $i from 1 through $layersAmount {
+  .colour_#{$i} {
+    width: $layerHeigth*$layersAmount;
+    height: $layerHeigth;
+    margin-top: 5%;
+   }
+}
+
+@for $i from 1 through $layersAmount {
+  .button#{$i} {
+    width: $layerHeigth;
+    height: $layerHeigth;
+    float: left;
+    box-shadow: $cakeShadow;
+    border-radius: 10%;
+   }
+}
+
+.button1{
+  background-color: $button1color;
+}
+.button2{
+  background-color: $button2color;
+}
+.button3{
+  background-color: $button3color;
+}
+.button4{
+  background-color: $button4color;
+}
+.button5{
+  background-color: $button5color;
+}
+.button6{
+  background-color: $button6color;
+}
+
+.add_layer_button, .remove_layer_button {
+  width: $layerHeigth;
+  height: $layerHeigth;
+  // box-shadow: $cakeShadow;
+  border-radius: 10%;
+  background-color: white;
+  display: inline-block;
+  p{
+    font-size: 2em;
+    color: $fontColor;
+    text-align: center;
+  }
+}
