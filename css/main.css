@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("../../fonts/opensans-bold-webfont.eot");
+  src: url("../../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../../fonts/opensans-bold-webfont.woff") format("woff"), url("../../fonts/opensans-bold-webfont.ttf") format("truetype"), url("../../fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanslight';
+  src: url("../../fonts/opensans-light-webfont.eot");
+  src: url("../../fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/opensans-light-webfont.woff2") format("woff2"), url("../../fonts/opensans-light-webfont.woff") format("woff"), url("../../fonts/opensans-light-webfont.ttf") format("truetype"), url("../../fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("../../fonts/opensans-regular-webfont.eot");
+  src: url("../../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../../fonts/opensans-regular-webfont.woff") format("woff"), url("../../fonts/opensans-regular-webfont.ttf") format("truetype"), url("../../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url("../../fonts/opensans-semibold-webfont.eot");
+  src: url("../../fonts/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/opensans-semibold-webfont.woff2") format("woff2"), url("../../fonts/opensans-semibold-webfont.woff") format("woff"), url("../../fonts/opensans-semibold-webfont.ttf") format("truetype"), url("../../fonts/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -306,7 +338,7 @@ input[type=button] {
 }
 
 .main_container {
-  width: 900px;
+  width: 800px;
   height: auto;
   margin: 0 auto;
 }
@@ -317,12 +349,20 @@ div[class^="birthdaycake_"] {
 
 .birthdaycake_name {
   width: 100%;
-  height: 200px;
+  height: 150px;
+}
+
+.birthdaycake_name h1 {
+  color: #4f4f4f;
+  font-size: 6em;
+  text-align: center;
+  padding: 5%;
+  text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
 }
 
 .birthdaycake_result {
   width: 65%;
-  height: 450px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -330,7 +370,7 @@ div[class^="birthdaycake_"] {
 
 .birthdaycake_colours {
   width: 35%;
-  height: 450px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -563,6 +603,10 @@ div[class^="birthdaycake_"] {
 
 .add_layer_button p, .remove_layer_button p {
   font-size: 2em;
-  color: #737373;
+  color: #4f4f4f;
   text-align: center;
+}
+
+body {
+  font-family: "open_sansregular", sans-serif;
 }

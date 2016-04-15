@@ -19,13 +19,17 @@ function addRemoveLayer(){
   var i = 0;
   $(".add_layer_button").on("click", function(){
     if ((i<=3)&&(i>0)){
-        var layer = $(".cake").children().eq(i);
-        var colorBar = $(".colours").children("div").eq(i);
+        var layer = $(".cake").children().eq(i-1);
+        var colorBar = $(".colours").children("div").eq(i-1);
+        var layerHeight = $(".layer_6").css("height");
         console.log(i);
         console.log("plus");
         console.log(layer);
         console.log(colorBar);
-        layer.show();
+        // layer.show();
+        layer.animate({
+           height: layerHeight,
+         }, 1000);
         colorBar.show();
         i--;
       }
