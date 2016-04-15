@@ -4,15 +4,16 @@
 }
 
 .main_container {
-  width: 800px;
+  width: 900px;
   height: auto;
   margin: 0 auto;
+  border: $testBorder;
 }
 
 
 div[class^="birthdaycake_"]{
   float: left;
-  // border: $testBorder;
+  border: $testBorder;
 }
 
 .birthdaycake_name {
@@ -25,10 +26,11 @@ div[class^="birthdaycake_"]{
     text-align: center;
     padding: 5%;
     text-shadow: $cakeShadow;
+    font-family: "open_sansregular";
   }
 
 }
-
+//TORT
 .birthdaycake_result {
   width: 65%;
   height: 350px;
@@ -56,6 +58,16 @@ div[class^="birthdaycake_"]{
   box-shadow: $cakeShadow;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.layers_container {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content:  flex-end;
 }
 
 @for $i from $layersAmount through 1 {
@@ -72,6 +84,7 @@ div[class^="birthdaycake_"]{
    }
 }
 
+//COLORS OF LAYERS
 .colours {
   width: 100%;
   height: auto;
@@ -146,15 +159,17 @@ div[class^="birthdaycake_"]{
 
 
 .add_layer_button, .remove_layer_button {
-  width: $layerHeigth;
-  height: $layerHeigth;
-  // box-shadow: $cakeShadow;
-  border-radius: 10%;
-  background-color: white;
-  display: inline-block;
-  p{
-    font-size: 2em;
-    color: $fontColor;
-    text-align: center;
+  @include button(1);
+}
+
+.send_cake {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 3% 7%;
+  button {
+    @include button(3);
+
   }
 }
