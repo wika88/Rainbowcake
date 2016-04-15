@@ -12,7 +12,6 @@
 
 div[class^="birthdaycake_"]{
   float: left;
-  border: 1px solid red;
 }
 
 .birthdaycake_name {
@@ -21,7 +20,7 @@ div[class^="birthdaycake_"]{
 }
 
 .birthdaycake_result {
-  width: 70%;
+  width: 65%;
   height: 450px;
   display: flex;
   justify-content: center;
@@ -29,7 +28,7 @@ div[class^="birthdaycake_"]{
 }
 
 .birthdaycake_colours {
-  width: 30%;
+  width: 35%;
   height: 450px;
   display: flex;
   justify-content: center;
@@ -66,18 +65,17 @@ div[class^="birthdaycake_"]{
 .colours {
   width: 100%;
   height: auto;
-  padding: 3% 5% 0 5%;
 }
 
 @for $i from 1 through $layersAmount {
   .colour_#{$i} {
-    width: $layerHeigth*$layersAmount;
+    width: ($layersAmount+1) * $layerHeigth;
     height: $layerHeigth;
-    margin-top: 5%;
+    margin-top: 4%;
    }
 }
 
-@for $i from 1 through $layersAmount {
+@for $i from 1 through ($layersAmount + 1) {
   .button#{$i} {
     width: $layerHeigth;
     height: $layerHeigth;
@@ -105,6 +103,37 @@ div[class^="birthdaycake_"]{
 .button6{
   background-color: $button6color;
 }
+.button7{
+  background-color: $layerColor;
+  // border: 2px solid grey;
+  position: relative;
+  // right: 1em;
+  // top: 32px;
+  width: $layerHeigth;
+  height: $layerHeigth;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    left: 16px;
+    top: -4px;
+    content: ' ';
+    height: 125%;
+    width: 2px;
+    background-color: #333;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
 
 .add_layer_button, .remove_layer_button {
   width: $layerHeigth;

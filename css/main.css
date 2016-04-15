@@ -313,7 +313,6 @@ input[type=button] {
 
 div[class^="birthdaycake_"] {
   float: left;
-  border: 1px solid red;
 }
 
 .birthdaycake_name {
@@ -322,7 +321,7 @@ div[class^="birthdaycake_"] {
 }
 
 .birthdaycake_result {
-  width: 70%;
+  width: 65%;
   height: 450px;
   display: flex;
   justify-content: center;
@@ -330,7 +329,7 @@ div[class^="birthdaycake_"] {
 }
 
 .birthdaycake_colours {
-  width: 30%;
+  width: 35%;
   height: 450px;
   display: flex;
   justify-content: center;
@@ -406,43 +405,42 @@ div[class^="birthdaycake_"] {
 .colours {
   width: 100%;
   height: auto;
-  padding: 3% 5% 0 5%;
 }
 
 .colour_1 {
-  width: 210px;
+  width: 245px;
   height: 35px;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .colour_2 {
-  width: 210px;
+  width: 245px;
   height: 35px;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .colour_3 {
-  width: 210px;
+  width: 245px;
   height: 35px;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .colour_4 {
-  width: 210px;
+  width: 245px;
   height: 35px;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .colour_5 {
-  width: 210px;
+  width: 245px;
   height: 35px;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .colour_6 {
-  width: 210px;
+  width: 245px;
   height: 35px;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .button1 {
@@ -486,6 +484,14 @@ div[class^="birthdaycake_"] {
 }
 
 .button6 {
+  width: 35px;
+  height: 35px;
+  float: left;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  border-radius: 10%;
+}
+
+.button7 {
   width: 35px;
   height: 35px;
   float: left;
@@ -502,7 +508,7 @@ div[class^="birthdaycake_"] {
 }
 
 .button3 {
-  background-color: #ecd641;
+  background-color: #ecd42f;
 }
 
 .button4 {
@@ -515,6 +521,36 @@ div[class^="birthdaycake_"] {
 
 .button6 {
   background-color: #6048b8;
+}
+
+.button7 {
+  background-color: #f0d66b;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  opacity: 0.3;
+}
+
+.button7:hover {
+  opacity: 1;
+}
+
+.button7:before, .button7:after {
+  position: absolute;
+  left: 16px;
+  top: -4px;
+  content: ' ';
+  height: 125%;
+  width: 2px;
+  background-color: #333;
+}
+
+.button7:before {
+  transform: rotate(45deg);
+}
+
+.button7:after {
+  transform: rotate(-45deg);
 }
 
 .add_layer_button, .remove_layer_button {

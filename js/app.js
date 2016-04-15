@@ -20,7 +20,7 @@ function addRemoveLayer(){
   $(".add_layer_button").on("click", function(){
     if ((i<=3)&&(i>0)){
         var layer = $(".cake").children().eq(i);
-        var colorBar = $(".colours").find("div").eq(i);
+        var colorBar = $(".colours").children("div").eq(i);
         console.log(i);
         console.log("plus");
         console.log(layer);
@@ -37,7 +37,7 @@ function addRemoveLayer(){
   $(".remove_layer_button").on("click", function(){
     if ((i>=0)&&(i<3)){
       var layer = $(".cake").children().eq(i);
-      var colorBar = $(".colours").find("div").eq(i);
+      var colorBar = $(".colours").children("div").eq(i);
       console.log(i);
       console.log("minus");
       console.log(layer);
