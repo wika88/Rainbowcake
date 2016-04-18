@@ -1,4 +1,4 @@
-Rainbowcake Company
+# Rainbowcake Company
 
 This site allow you to create your own rainbow-birthdaycake. 
 
