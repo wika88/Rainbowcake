@@ -1,3 +1,15 @@
+Rainbowcake Company
+
+This site allow you to create your own rainbow-birthdaycake. 
+
+Number of layers: 3-6.
+Number of colours: 6 (+ 1 natural).
+
+CSS and jQuery only. Made it from scratch.
+
+-------------------------------------------------------------------------
+About the project technically + how to open the project
+
 # SASS (grid - pc/laptop first), jQuery, [browser-sync](https://www.browsersync.io/docs/gulp/).
 
 Ten template pozwala nam na kompilacje SASS bez potrzeby kopiowania pliku *node_modules* do folderu projektu za kazdym razem, wystarczy miec go w jednym miejscu.
