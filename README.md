@@ -2,8 +2,11 @@
 
 This site allow you to create your own rainbow-birthdaycake. 
 
+
 Number of layers: 3-6.
+
 Number of colours: 6 (+ 1 natural).
+
 
 CSS and jQuery only. Made it from scratch.
 
