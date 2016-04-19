@@ -1,14 +1,19 @@
 @import 'reset';
 @import 'header';
 @import 'nav';
-@import 'aside';
 @import 'footer';
 @import 'scriptClasses';
 @import 'grid';
 @import 'cake';
+@import 'topping';
+@import 'dimension';
 
 body {
   font-family: "open_sansregular", Arial, sans-serif;
   color: $fontColor;
 
+}
+
+.background {
+  background-color: $backgroundColor;
 }

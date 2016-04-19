@@ -1,0 +1,55 @@
+.dimension {
+  height: 500px;
+}
+
+.dimension_name {
+  width: 900px;
+  color: $fontColor;
+  text-align: center;
+  text-shadow: $cakeShadow;
+  font-family: "open_sansregular";
+  width: 900px;
+  margin: 0 auto;
+  height: auto;
+  font-size: 5em;
+}
+
+.dimension_container{
+  width: 900px;
+  height: 350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+@for $i from 1 through 3 {
+  .size_#{$i} {
+    width: $layerWidth -  ($layerWidth * 0.15 * $i);
+    height: $layerWidth -  ($layerWidth * 0.15 * $i);
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: $cakeShadow;
+    transition: 0.5s;
+
+    //   &:hover {
+     //
+    //      animation: entering 1s 1 forwards normal;
+    //    -moz-animation: entering 1s 1 forwards normal;
+    //    -webkit-animation: entering 1s 1 forwards normal;
+     //
+    //    @keyframes entering
+    //      {
+    //        0% {width: ($layerWidth -  ($layerWidth * 0.15 * $i)); height: ($layerWidth -  ($layerWidth * 0.15 * $i));}
+    //        100% {width: ($layerWidth -  ($layerWidth * 0.1 * $i)); height:($layerWidth -  ($layerWidth * 0.1 * $i));}
+    //     }
+    //  }
+
+   }
+}
+
+// @for $i from 1 through 3 {
+//   .size_#{$i} {
+//
+//   }
+// }

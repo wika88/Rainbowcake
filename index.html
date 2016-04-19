@@ -7,15 +7,42 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'  />
     <link rel='stylesheet' href='./css/main.css'  />
     <script src='http://code.jquery.com/jquery-2.2.1.min.js' type='text/javascript'></script>
+    <!-- <script src='./js/jquery.js' type='text/javascript'></script> -->
+    <script src='./js/jquery-ui.js' type='text/javascript'></script>
     <script src='./js/app.js' type='text/javascript'></script>
 
     <title></title>
 </head>
 <body>
-  <section class="grid-container main">
+  <section class="grid-container header">
+    <div class="header_container">
+      <p class="header_logo">
+        <strong class="letter_1" data-color="#dc4b4b">R</strong>
+        <strong class="letter_2" data-color="#ed9241">A</strong>
+        <strong class="letter_3" data-color="#ecd42f">I</strong>
+        <strong class="letter_4" data-color="#8fc235">N</strong>
+        <strong class="letter_5" data-color="#4b8fbe">B</strong>
+        <strong class="letter_6" data-color="#6048b8">O</strong>
+        <strong class="letter_7" data-color="#dc4b4b">W</strong>
+        <strong class="word_cake">CAKE</strong>
+      </p>
+      <div class="header_nav">
+        <div class="nav_1" data-color="#dc4b4b"></div>
+        <div class="nav_2" data-color="#ed9241"></div>
+        <div class="nav_3" data-color="#ecd42f"></div>
+        <div class="nav_4" data-color="#8fc235"></div>
+        <div class="nav_5" data-color="#4b8fbe"></div>
+        <div class="nav_6" data-color="#6048b8"></div>
+    </div>
+    </div>
+  </section>
+
+  <section class="grid-container main background">
     <div class="main_container">
       <div class="birthdaycake_name">
         <h1>Make a cake!</h1>
+        <h3>Choose the color of layers. Push + / - to add or remove layer. After all - send the order.</h3>
+        <h4>Have a nice game!</h4>
       </div>
       <div class="birthdaycake_result">
         <div class="cake">
@@ -97,7 +124,29 @@
         <button id="send_cake">
           <p>order</p>
         </button>
-      <section>
+      </section>
+    </div>
+  </section>
+
+  <section class="grid-container topping">
+    <div class="topping-container">
+    </div>
+  </section>
+
+  <section class="grid-container dimension background">
+    <div class="dimension_name">
+      <h1>Choose size..</h1>
+    </div>
+    <div class="dimension_container">
+      <div>
+        <div class="size_1 size"></div>
+      </div>
+      <div>
+        <div class="size_2 size"></div>
+      </div>
+      <div>
+        <div class="size_3 size"></div>
+      </div>
     </div>
   </section>
 </body>

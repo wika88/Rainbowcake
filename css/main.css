@@ -263,6 +263,144 @@ input[type=button] {
   clear: both;
 }
 
+.header {
+  background-color: white;
+  height: 500px;
+}
+
+.header_container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.header_logo {
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  padding-top: 15%;
+}
+
+.letter_1 {
+  font-size: 6em;
+  font-weight: bold;
+  font-size-adjust: 50;
+  color: white;
+  text-shadow: -1px 0 #ede9e3, 0 1px #ede9e3, 1px 0 #ede9e3, 0 -1px #ede9e3;
+}
+
+.letter_2 {
+  font-size: 6em;
+  font-weight: bold;
+  font-size-adjust: 50;
+  color: white;
+  text-shadow: -1px 0 #ede9e3, 0 1px #ede9e3, 1px 0 #ede9e3, 0 -1px #ede9e3;
+}
+
+.letter_3 {
+  font-size: 6em;
+  font-weight: bold;
+  font-size-adjust: 50;
+  color: white;
+  text-shadow: -1px 0 #ede9e3, 0 1px #ede9e3, 1px 0 #ede9e3, 0 -1px #ede9e3;
+}
+
+.letter_4 {
+  font-size: 6em;
+  font-weight: bold;
+  font-size-adjust: 50;
+  color: white;
+  text-shadow: -1px 0 #ede9e3, 0 1px #ede9e3, 1px 0 #ede9e3, 0 -1px #ede9e3;
+}
+
+.letter_5 {
+  font-size: 6em;
+  font-weight: bold;
+  font-size-adjust: 50;
+  color: white;
+  text-shadow: -1px 0 #ede9e3, 0 1px #ede9e3, 1px 0 #ede9e3, 0 -1px #ede9e3;
+}
+
+.letter_6 {
+  font-size: 6em;
+  font-weight: bold;
+  font-size-adjust: 50;
+  color: white;
+  text-shadow: -1px 0 #ede9e3, 0 1px #ede9e3, 1px 0 #ede9e3, 0 -1px #ede9e3;
+}
+
+.letter_7 {
+  font-size: 6em;
+  font-weight: bold;
+  font-size-adjust: 50;
+  color: white;
+  text-shadow: -1px 0 #ede9e3, 0 1px #ede9e3, 1px 0 #ede9e3, 0 -1px #ede9e3;
+}
+
+.word_cake {
+  font-size: 6em;
+  font-weight: bold;
+  font-size-adjust: 50;
+  color: #4f4f4f;
+  text-shadow: 0;
+}
+
+.header_nav {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav_1 {
+  width: 100px;
+  height: 100px;
+  background-color: #ede9e3;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  border-radius: 10%;
+}
+
+.nav_2 {
+  width: 100px;
+  height: 100px;
+  background-color: #ede9e3;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  border-radius: 10%;
+}
+
+.nav_3 {
+  width: 100px;
+  height: 100px;
+  background-color: #ede9e3;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  border-radius: 10%;
+}
+
+.nav_4 {
+  width: 100px;
+  height: 100px;
+  background-color: #ede9e3;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  border-radius: 10%;
+}
+
+.nav_5 {
+  width: 100px;
+  height: 100px;
+  background-color: #ede9e3;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  border-radius: 10%;
+}
+
+.nav_6 {
+  width: 100px;
+  height: 100px;
+  background-color: #ede9e3;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  border-radius: 10%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -333,7 +471,6 @@ input[type=button] {
 }
 
 .main {
-  background-color: #dddddd;
   height: 720px;
 }
 
@@ -341,26 +478,31 @@ input[type=button] {
   width: 900px;
   height: auto;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 div[class^="birthdaycake_"] {
   float: left;
-  border: 1px solid red;
 }
 
 .birthdaycake_name {
   width: 100%;
-  height: 150px;
+  height: 220px;
+  padding-top: 5%;
+}
+
+.birthdaycake_name h1, .birthdaycake_name h3, .birthdaycake_name h4 {
+  color: #4f4f4f;
+  text-align: center;
+  text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  font-family: "open_sansregular";
 }
 
 .birthdaycake_name h1 {
-  color: #4f4f4f;
   font-size: 6em;
-  text-align: center;
-  padding: 5%;
-  text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
-  font-family: "open_sansregular";
+}
+
+.birthdaycake_name h4 {
+  font-size: 2em;
 }
 
 .birthdaycake_result {
@@ -386,7 +528,7 @@ div[class^="birthdaycake_"] {
   height: auto;
   margin: 0 auto;
   padding: 4% 5% 0 5%;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
   display: flex;
@@ -406,6 +548,9 @@ div[class^="birthdaycake_"] {
   width: 350px;
   height: 35px;
   background-color: #f0d66b;
+  background-image: url("../images/img-noise.png");
+  background-repeat: repeat;
+  background-position: 600px;
   border: 0px solid black;
   margin-top: 3%;
   border-radius: 10px;
@@ -415,6 +560,9 @@ div[class^="birthdaycake_"] {
   width: 350px;
   height: 35px;
   background-color: #f0d66b;
+  background-image: url("../images/img-noise.png");
+  background-repeat: repeat;
+  background-position: 500px;
   border: 0px solid black;
   margin-top: 3%;
   border-radius: 10px;
@@ -424,6 +572,9 @@ div[class^="birthdaycake_"] {
   width: 350px;
   height: 35px;
   background-color: #f0d66b;
+  background-image: url("../images/img-noise.png");
+  background-repeat: repeat;
+  background-position: 400px;
   border: 0px solid black;
   margin-top: 3%;
   border-radius: 10px;
@@ -433,6 +584,9 @@ div[class^="birthdaycake_"] {
   width: 350px;
   height: 35px;
   background-color: #f0d66b;
+  background-image: url("../images/img-noise.png");
+  background-repeat: repeat;
+  background-position: 300px;
   border: 0px solid black;
   margin-top: 3%;
   border-radius: 10px;
@@ -442,6 +596,9 @@ div[class^="birthdaycake_"] {
   width: 350px;
   height: 35px;
   background-color: #f0d66b;
+  background-image: url("../images/img-noise.png");
+  background-repeat: repeat;
+  background-position: 200px;
   border: 0px solid black;
   margin-top: 3%;
   border-radius: 10px;
@@ -451,6 +608,9 @@ div[class^="birthdaycake_"] {
   width: 350px;
   height: 35px;
   background-color: #f0d66b;
+  background-image: url("../images/img-noise.png");
+  background-repeat: repeat;
+  background-position: 100px;
   border: 0px solid black;
   margin-top: 3%;
   border-radius: 10px;
@@ -501,7 +661,7 @@ div[class^="birthdaycake_"] {
   width: 35px;
   height: 35px;
   float: left;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
 }
 
@@ -509,7 +669,7 @@ div[class^="birthdaycake_"] {
   width: 35px;
   height: 35px;
   float: left;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
 }
 
@@ -517,7 +677,7 @@ div[class^="birthdaycake_"] {
   width: 35px;
   height: 35px;
   float: left;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
 }
 
@@ -525,7 +685,7 @@ div[class^="birthdaycake_"] {
   width: 35px;
   height: 35px;
   float: left;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
 }
 
@@ -533,7 +693,7 @@ div[class^="birthdaycake_"] {
   width: 35px;
   height: 35px;
   float: left;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
 }
 
@@ -541,7 +701,7 @@ div[class^="birthdaycake_"] {
   width: 35px;
   height: 35px;
   float: left;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
 }
 
@@ -549,7 +709,7 @@ div[class^="birthdaycake_"] {
   width: 35px;
   height: 35px;
   float: left;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
 }
 
@@ -639,7 +799,74 @@ div[class^="birthdaycake_"] {
   border-color: white;
 }
 
+.topping {
+  background-color: white;
+  height: 500px;
+}
+
+.topping_container {
+  width: 900px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.dimension {
+  height: 500px;
+}
+
+.dimension_name {
+  width: 900px;
+  color: #4f4f4f;
+  text-align: center;
+  text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  font-family: "open_sansregular";
+  width: 900px;
+  margin: 0 auto;
+  height: auto;
+  font-size: 5em;
+}
+
+.dimension_container {
+  width: 900px;
+  height: 350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.size_1 {
+  width: 297.5px;
+  height: 297.5px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  transition: 0.5s;
+}
+
+.size_2 {
+  width: 245px;
+  height: 245px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  transition: 0.5s;
+}
+
+.size_3 {
+  width: 192.5px;
+  height: 192.5px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  transition: 0.5s;
+}
+
 body {
   font-family: "open_sansregular", Arial, sans-serif;
   color: #4f4f4f;
+}
+
+.background {
+  background-color: #ede9e3;
 }

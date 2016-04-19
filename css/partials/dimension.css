@@ -1,0 +1,9 @@
+.dimension {
+  height: 500px;
+}
+
+.dimension_container {
+  width: 900px;
+  height: 400px;
+  margin: 0 auto;
+}
