@@ -11,41 +11,59 @@
     <script src='./js/jquery-ui.js' type='text/javascript'></script>
     <script src='./js/app.js' type='text/javascript'></script>
 
-    <title></title>
+    <title>Rainbow Cake Company</title>
 </head>
 <body>
   <section class="grid-container header">
     <div class="header_container">
       <p class="header_logo">
-        <strong class="letter_1" data-color="#dc4b4b">R</strong>
-        <strong class="letter_2" data-color="#ed9241">A</strong>
-        <strong class="letter_3" data-color="#ecd42f">I</strong>
-        <strong class="letter_4" data-color="#8fc235">N</strong>
-        <strong class="letter_5" data-color="#4b8fbe">B</strong>
-        <strong class="letter_6" data-color="#6048b8">O</strong>
-        <strong class="letter_7" data-color="#dc4b4b">W</strong>
-        <strong class="word_cake">CAKE</strong>
+        <b class="letter_1" data-color="#dc4b4b">R</b>
+        <b class="letter_2" data-color="#ed9241">A</b>
+        <b class="letter_3" data-color="#ecd42f">I</b>
+        <b class="letter_4" data-color="#8fc235">N</b>
+        <b class="letter_5" data-color="#4b8fbe">B</b>
+        <b class="letter_6" data-color="#6048b8">O</b>
+        <b class="letter_7" data-color="#dc4b4b">W </b>
+        <span class="word_cake">CAKE</span>
       </p>
       <div class="header_nav">
-        <div class="nav_1" data-color="#dc4b4b"></div>
-        <div class="nav_2" data-color="#ed9241"></div>
-        <div class="nav_3" data-color="#ecd42f"></div>
-        <div class="nav_4" data-color="#8fc235"></div>
-        <div class="nav_5" data-color="#4b8fbe"></div>
-        <div class="nav_6" data-color="#6048b8"></div>
+        <a href="#hello"><div class="nav_1" data-color="#dc4b4b"></div></a>
+        <a href="#main"><div class="nav_2" data-color="#ed9241"></div></a>
+        <a href="#topping"><div class="nav_3" data-color="#ecd42f"></div></a>
+        <a href="#dimension"><div class="nav_4" data-color="#8fc235"></div></a>
+        <a href="#summary"><div class="nav_5" data-color="#4b8fbe"></div></a>
+        <a href="#contact"><div class="nav_6" data-color="#6048b8"></div></a>
     </div>
     </div>
   </section>
 
-  <section class="grid-container main background">
+  <section id="hello" class="grid-container">
+    <div class="hello_container">
+      <div class="name">
+        <h1>Hello!</h1>
+      </div>
+      <article class="hello_left">
+        <h4>What exactly the Rainbow Cake is?</h4>
+        <h3>Choose the color of layers. Push + / - to add or remove layer. After all - send the order.</h3>
+      </article>
+      <section class="hello_right">
+        <div class="cake">
+          <div class="candles">
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="grid-container background"  id="main">
     <div class="main_container">
-      <div class="birthdaycake_name">
+      <div class="name">
         <h1>Make a cake!</h1>
         <h3>Choose the color of layers. Push + / - to add or remove layer. After all - send the order.</h3>
         <h4>Have a nice game!</h4>
       </div>
       <div class="birthdaycake_result">
-        <div class="cake">
+        <div class="rainbow_cake">
           <section class="layers_container">
             <div class="layer_1"></div>
             <div class="layer_2"></div>
@@ -120,33 +138,61 @@
           </div>
         </div>
       </div>
-      <section class="send_cake">
+      <!-- <section class="send_cake">
         <button id="send_cake">
           <p>order</p>
         </button>
-      </section>
+      </section> -->
     </div>
   </section>
 
-  <section class="grid-container topping">
+  <section class="grid-container" id="topping">
     <div class="topping-container">
     </div>
   </section>
 
-  <section class="grid-container dimension background">
-    <div class="dimension_name">
-      <h1>Choose size..</h1>
+  <section class="grid-container background" id="dimension">
+    <div class="name">
+      <h1>Choose size...</h1>
+      <h3>28cm, 24cm, 18cm. Big, medium or small party. Click and choose!</h3>
     </div>
     <div class="dimension_container">
       <div>
-        <div class="size_1 size"></div>
+        <div class="size_1 size">
+          <span>16<b>☻</b></span>
+          <!-- <div class="pacman"></div> -->
+        </div>
       </div>
       <div>
-        <div class="size_2 size"></div>
+        <div class="size_2 size">
+          <span>12<b>☻</b></span>
+          <!-- <div class="pacman"></div> -->
+        </div>
       </div>
       <div>
-        <div class="size_3 size"></div>
+        <div class="size_3 size">
+          <span>8<b>☻</b></span>
+          <!-- <div class="pacman"></div> -->
+        </div>
       </div>
+    </div>
+  </section>
+  <section class="grid-container" id="summary">
+    <div class="summary_container">
+      <div class="name">
+        <h1>Let's sum up</h1>
+        <h3>Check if everything is right and make an order.</h3>
+      </div>
+      <article class="summary_form">
+      </article>
+      <article class="summary_price">
+      </article>
+      <div class="summary_button">
+      </div>
+    </div>
+  </section>
+  <section class="grid-container background" id="contact">
+    <div class="contact_container">
     </div>
   </section>
 </body>

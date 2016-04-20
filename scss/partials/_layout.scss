@@ -4,16 +4,35 @@
 @import 'footer';
 @import 'scriptClasses';
 @import 'grid';
+@import 'hello';
 @import 'cake';
 @import 'topping';
 @import 'dimension';
+@import 'summary';
+@import 'contact';
 
 body {
   font-family: "open_sansregular", Arial, sans-serif;
   color: $fontColor;
-
 }
 
 .background {
   background-color: $backgroundColor;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+}
+
+h1, h2, h3, h4{
+  color: $fontColor;
+  text-shadow: $cakeShadow;
+  font-family: "open_sansregular";
+}
+h1 {
+  font-size: 5em;
+}
+h4 {
+  font-size: 2em;
 }

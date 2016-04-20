@@ -1,21 +1,85 @@
 $(document).ready(function(){
 
+//snippets - scrolling menu
+
+function scrolling(){
+  $('a[href^="#"]').on('click', function(event) {
+    console.log("klik");
+
+      var target = $( $(this).attr('href') );
+      console.log(target);
+      var targetOffsetTop = (target.offset().top - 100) + "px";
+      console.log(targetOffsetTop);
+
+      if( target.length ) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: targetOffsetTop
+          }, 1000);
+      }
+  });
+}
+
+scrolling();
+
+//sticky menu
+
+function stickyMenu(){
+
+  var menu = $(".header_nav");
+  var height = parseInt($(".nav_1").css("height"));
+  var newHeight =  height*0.5;
+  var menuOffset = menu.offset().top;
+
+
+  $(window).scroll(function(event){
+
+    var position = $(this).scrollTop();
+
+    console.log(menuOffset);
+    console.log(newHeight);
+
+    if (position>menuOffset){
+      menu.addClass("sticky");
+      menu.find("div").css("height", newHeight);
+    }
+    else {
+      menu.removeClass("sticky");
+      menu.find("div").css("height", height);
+    }
+  });
+}
+
+stickyMenu();
+
+
 //header - intro
 
+
+function showNav(){
+  $(".header_nav").find("div").each(function(){
+    var navDataColor = $(this).data("color");
+    $(this).animate({
+      backgroundColor: navDataColor
+    }, 3000);
+  });
+}
+
+
 function setIntro() {
-  $(".header_logo").children("strong").each(function(){
+  $(".header_logo").find("b").each(function(){
     // $(this).css("color", "white");
     var dataColor = $(this).data("color");
     $(this).animate({
       color: "white"
-    }, 2000, function(){
+    }, 300, function(){
+      showNav();
       $(this).animate({
         color: dataColor
-      }, 2000);
+      }, 3000);
     });
   });
 }
-
 
 
 function showColor($num){
@@ -23,8 +87,9 @@ function showColor($num){
   $(".letter_" + $num).animate({ //?
     color: dataColor
   }, 200, function(){
+    $num++;
     if($num < 8) {
-      showColor($num+1);
+      showColor($num);
     }
     else {
       setIntro();
@@ -137,36 +202,6 @@ function addRemoveLayer(){
 
 addRemoveLayer();
 
-
-
-// blokowanie buttona
-// var pushNextButton = function(){
-//     console.log("przod");
-//
-//     if(isAnimationRunning === false){
-//
-//       if (index < 7){
-//         index++;
-//       } else {
-//         index = 1;
-//       }
-//       console.log(index);
-//       isAnimationRunning = true,
-//
-//       ulElement.animate({
-//           left: -pictureWidth*index
-//       }, 500, function() {
-//          isAnimationRunning = false;
-//          if(index === 7) {
-//            ulElement.css('left', '-400px');
-//            console.log('complete');
-//            index = 1;
-//          }
-//       });
-//       isAnimationRunning = true;
-//     }
-//   }
-
 //change cake size
 
 function changeSize(){
@@ -184,7 +219,6 @@ function changeSize(){
     var boxShadowArray6 = boxShadowArray[6];
     console.log(boxShadowArray6);
 
-
       $(this).on("mouseenter", function(){
 
         //I make new Diagonal
@@ -198,6 +232,10 @@ function changeSize(){
         var newBoxShadowArray= boxShadowArray.join(' ');
         console.log(newBoxShadowArray);
 
+        $(this).children().animate({
+          opacity: 100
+        }, 500);
+
         //I push new values to css
         $(this).css({
           width: newDiagonal,
@@ -205,17 +243,34 @@ function changeSize(){
           boxShadow: newBoxShadowArray
         });
       });
-
       $(this).on("mouseleave", function(){
 
-        $(this).css("width", diagonal);
-        $(this).css("height", diagonal);
-        $(this).css("box-shadow", boxShadow);
+        $(this).css({
+          width: diagonal,
+          height: diagonal,
+          boxShadow: boxShadow
+        });
+        //
+        // $(this).css("width", diagonal);
+        // $(this).css("height", diagonal);
+        // $(this).css("box-shadow", boxShadow);
+
+        $(this).children().animate({
+          opacity: 0
+        }, 500);
+
+      });
+      $(this).on("click", function(){
+        $(this).toggleClass("dimension_border");
+
+        // $(this).children().css("opacity", "100");
       });
   });
 }
 
 changeSize();
+
+
 
 
 });

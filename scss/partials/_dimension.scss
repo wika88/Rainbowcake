@@ -1,22 +1,10 @@
-.dimension {
+#dimension {
   height: 500px;
-}
-
-.dimension_name {
-  width: 900px;
-  color: $fontColor;
-  text-align: center;
-  text-shadow: $cakeShadow;
-  font-family: "open_sansregular";
-  width: 900px;
-  margin: 0 auto;
-  height: auto;
-  font-size: 5em;
 }
 
 .dimension_container{
   width: 900px;
-  height: 350px;
+  height: 330px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -31,25 +19,40 @@
     border-radius: 50%;
     box-shadow: $cakeShadow;
     transition: 0.5s;
-
-    //   &:hover {
-     //
-    //      animation: entering 1s 1 forwards normal;
-    //    -moz-animation: entering 1s 1 forwards normal;
-    //    -webkit-animation: entering 1s 1 forwards normal;
-     //
-    //    @keyframes entering
-    //      {
-    //        0% {width: ($layerWidth -  ($layerWidth * 0.15 * $i)); height: ($layerWidth -  ($layerWidth * 0.15 * $i));}
-    //        100% {width: ($layerWidth -  ($layerWidth * 0.1 * $i)); height:($layerWidth -  ($layerWidth * 0.1 * $i));}
-    //     }
-    //  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
    }
 }
 
-// @for $i from 1 through 3 {
-//   .size_#{$i} {
-//
-//   }
+.size {
+  span {
+    font-size: $pacmanSize*2;
+    color: $pacmanColor;
+    letter-spacing: -$pacmanSize/4;
+    opacity: 0;
+
+    b {
+      font-size: $pacmanSize*3;
+    }
+  }
+}
+// .pacman {
+//   width: 0;
+//   height: 0;
+//   border-right: $pacmanSize solid transparent;
+//   border-top: $pacmanSize solid $pacmanColor;
+//   border-left: $pacmanSize solid $pacmanColor;
+//   border-bottom: $pacmanSize solid $pacmanColor;
+//   border-top-left-radius: $pacmanSize;
+//   border-top-right-radius: $pacmanSize;
+//   border-bottom-left-radius: $pacmanSize;
+//   border-bottom-right-radius: $pacmanSize;
+//   opacity: 0;
+//   margin: $pacmanSize*0.2;
 // }
+
+.dimension_border {
+  border: 0.5em solid $button1color;
+}

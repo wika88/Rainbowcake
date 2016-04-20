@@ -401,6 +401,13 @@ input[type=button] {
   border-radius: 10%;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -470,8 +477,153 @@ input[type=button] {
   width: 100%;
 }
 
-.main {
-  height: 720px;
+#hello {
+  height: 650px;
+  background-color: #ede9e3;
+}
+
+.hello_container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hello_left, .hello_right {
+  width: 50%;
+  height: 100%;
+  float: left;
+  font-size: 12px;
+  text-align: left;
+}
+
+h4 {
+  line-height: 3em;
+}
+
+/* Pure CSS cake made with pride by
+   %a(href="http://github.com/jaicab" target="_blank") Jaime Caballero */
+@keyframes flames {
+  0% {
+    height: 2.2em;
+    transform: rotate(0.5deg);
+    opacity: 0.8;
+  }
+  100% {
+    height: 2.5em;
+    transform: rotate(-0.5deg);
+    border-radius: 50% / 30%;
+    border-top-right-radius: 50% 60%;
+    border-top-left-radius: 50% 60%;
+    opacity: 1;
+  }
+}
+
+@keyframes candles {
+  0% {
+    height: 10em;
+    border-radius: 50% / 5%;
+  }
+  100% {
+    height: 2em;
+    border-radius: 50% / 25%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.cake {
+  height: 30em;
+  width: 30em;
+  margin: 8em auto 0;
+  position: relative;
+  border-radius: 100% / 50%;
+  background: #f9f9f9;
+  border-bottom: 0.25em solid #cccccc;
+}
+
+.cake::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15em;
+  border-radius: 50%;
+  background: #f9f9f9;
+  border-bottom: 0.5em solid #c6c6c6;
+  z-index: 10;
+}
+
+.cake::after {
+  content: '';
+  position: absolute;
+  top: 5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15em;
+  border-radius: 50%;
+  border-top-right-radius: 25%;
+  border-top-left-radius: 25%;
+  background: white;
+  box-shadow: 0 5em 0 white, 0 10em 0 white;
+}
+
+.candles {
+  z-index: 20;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 10em;
+  width: 2.5em;
+  position: absolute;
+  bottom: 22.5em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 50% / 5%;
+  animation: candles 15s 2s infinite alternate;
+  background: #ffcc00;
+  box-shadow: -3.5em 5em 0 0 #77DD77, 3.5em 5em 0 0 #FF6961, -7em -2.5em 0 -3px #FFB347, 7em -2.5em 0 -3px #779ECB, -10.5em 2em 0 -1px #B19CD9, 10.5em 2em 0 -1px #A5D3CA;
+}
+
+.candles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  border-radius: 50%;
+  background: #cca300;
+  box-shadow: -3.5em 5em 0 0 #4ed34e, 3.5em 5em 0 0 #ff392e, -7em -2.5em 0 -3px #ff9e14, 7em -2.5em 0 -3px #5284bd, -10.5em 2em 0 -1px #9477cb, 10.5em 2em 0 -1px #83c2b6;
+}
+
+.candles::after {
+  content: '';
+  position: absolute;
+  top: -2em;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50% / 40%;
+  border-top-right-radius: 50% 60%;
+  border-top-left-radius: 50% 60%;
+  background: #f0d66b;
+  height: 2.5em;
+  width: 1.5em;
+  animation: flames 0.75s infinite alternate;
+  box-shadow: 0 0 0 1px #f5e399, -3.5em 5em 1px 0 #f0d66b, 3.5em 5em 1px 0 #f0d66b, -7em -2.5em 1px 0 #f0d66b, 7em -2.5em 1px 0 #f0d66b, -10.5em 2em 1px 0 #f0d66b, 10.5em 2em 1px 0 #f0d66b;
+}
+
+#main {
+  height: 650px;
 }
 
 .main_container {
@@ -482,27 +634,6 @@ input[type=button] {
 
 div[class^="birthdaycake_"] {
   float: left;
-}
-
-.birthdaycake_name {
-  width: 100%;
-  height: 220px;
-  padding-top: 5%;
-}
-
-.birthdaycake_name h1, .birthdaycake_name h3, .birthdaycake_name h4 {
-  color: #4f4f4f;
-  text-align: center;
-  text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
-  font-family: "open_sansregular";
-}
-
-.birthdaycake_name h1 {
-  font-size: 6em;
-}
-
-.birthdaycake_name h4 {
-  font-size: 2em;
 }
 
 .birthdaycake_result {
@@ -521,7 +652,7 @@ div[class^="birthdaycake_"] {
   align-items: flex-end;
 }
 
-.cake {
+.rainbow_cake {
   background-color: white;
   border: 0px solid black;
   width: auto;
@@ -777,6 +908,10 @@ div[class^="birthdaycake_"] {
   color: #4f4f4f;
   text-align: center;
   border-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
 }
 
 .send_cake {
@@ -797,9 +932,12 @@ div[class^="birthdaycake_"] {
   color: #4f4f4f;
   text-align: center;
   border-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.topping {
+#topping {
   background-color: white;
   height: 500px;
 }
@@ -810,25 +948,13 @@ div[class^="birthdaycake_"] {
   margin: 0 auto;
 }
 
-.dimension {
+#dimension {
   height: 500px;
-}
-
-.dimension_name {
-  width: 900px;
-  color: #4f4f4f;
-  text-align: center;
-  text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
-  font-family: "open_sansregular";
-  width: 900px;
-  margin: 0 auto;
-  height: auto;
-  font-size: 5em;
 }
 
 .dimension_container {
   width: 900px;
-  height: 350px;
+  height: 330px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -842,6 +968,9 @@ div[class^="birthdaycake_"] {
   border-radius: 50%;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .size_2 {
@@ -851,6 +980,9 @@ div[class^="birthdaycake_"] {
   border-radius: 50%;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .size_3 {
@@ -860,6 +992,68 @@ div[class^="birthdaycake_"] {
   border-radius: 50%;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.size span {
+  font-size: 70px;
+  color: #c2c2c2;
+  letter-spacing: -8.75px;
+  opacity: 0;
+}
+
+.size span b {
+  font-size: 105px;
+}
+
+.dimension_border {
+  border: 0.5em solid #dc4b4b;
+}
+
+.summary {
+  height: 720px;
+}
+
+*[class^="summary_"] {
+  border: 1px solid red;
+}
+
+.summary_container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.summary_form {
+  width: 60%;
+  height: 450px;
+  float: left;
+}
+
+.summary_price {
+  width: 40%;
+  height: 450px;
+  float: left;
+}
+
+.summary_button {
+  width: 100%;
+  height: 100px;
+  clear: both;
+}
+
+#contact {
+  height: 720px;
+}
+
+.contact_container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid red;
 }
 
 body {
@@ -869,4 +1063,23 @@ body {
 
 .background {
   background-color: #ede9e3;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+  color: #4f4f4f;
+  text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  font-family: "open_sansregular";
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h4 {
+  font-size: 2em;
 }

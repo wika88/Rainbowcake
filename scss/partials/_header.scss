@@ -78,6 +78,12 @@
   }
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+}
 // @keyframes pulsowanie
 // {
 //     0% {background-color: violet; transform:rotate(0);}
