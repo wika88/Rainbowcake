@@ -8,3 +8,7 @@
   height: 400px;
   margin: 0 auto;
 }
+
+*[class^=".topping"] {
+  border: $testBorder;
+}

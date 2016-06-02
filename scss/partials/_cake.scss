@@ -147,18 +147,18 @@ div[class^="birthdaycake_"]{
 
 
 .add_layer_button, .remove_layer_button {
-  @include button(1);
+  @include button(1, 1);
   display: inline-block;
 }
 
-.send_cake {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: flex-end;
-  padding: 3% 7%;
-  button {
-    @include button(3);
-
-  }
-}
+// .send_cake {
+//   width: 100%;
+//   height: auto;
+//   display: flex;
+//   justify-content: flex-end;
+//   padding: 3% 7%;
+//   button {
+//     @include button(3, 2);
+//
+//   }
+// }

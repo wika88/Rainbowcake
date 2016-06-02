@@ -59,6 +59,10 @@
   justify-content: space-around;
   align-items: center;
   // padding-bottom: 10%;
+  a {
+    text-decoration: none;
+  }
+
 }
 
 @for $i from 1 through 6 {
@@ -68,15 +72,32 @@
     background-color: $backgroundColor;
     box-shadow: $cakeShadow;
     border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: white;
+      font-size: 1.5  em;
+      opacity: 0.2;
+    }
 
-    //   &:hover {
+    // &:hover {
     //
-    //     animation: pulsowanie 0.5s normal;
-    //   -moz-animation: pulsowanie 0.5s normal;
-    //   -webkit-animation: pulsowanie 0.5s normal;
+    //     p {
+    //       animation: showText 1s normal ;
+    //     -moz-animation: showText 1s normal;
+    //     -webkit-animation: showText 1s normal;
+    //   }
     // }
   }
 }
+
+
+// @keyframes showText
+// {
+//     0% {opacity: 0;}
+//     100% {opacity: 100%;}
+// }
 
 .sticky {
     position: fixed;
@@ -84,10 +105,3 @@
     left: 0;
     z-index: 30;
 }
-// @keyframes pulsowanie
-// {
-//     0% {background-color: violet; transform:rotate(0);}
-//     100% {background-color: red; transform:rotate(90deg);}
-// }
-
-// }

@@ -353,12 +353,25 @@ input[type=button] {
   align-items: center;
 }
 
+.header_nav a {
+  text-decoration: none;
+}
+
 .nav_1 {
   width: 100px;
   height: 100px;
   background-color: #ede9e3;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_1 p {
+  color: white;
+  font-size: 1.5  em;
+  opacity: 0.2;
 }
 
 .nav_2 {
@@ -367,6 +380,15 @@ input[type=button] {
   background-color: #ede9e3;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_2 p {
+  color: white;
+  font-size: 1.5  em;
+  opacity: 0.2;
 }
 
 .nav_3 {
@@ -375,6 +397,15 @@ input[type=button] {
   background-color: #ede9e3;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_3 p {
+  color: white;
+  font-size: 1.5  em;
+  opacity: 0.2;
 }
 
 .nav_4 {
@@ -383,6 +414,15 @@ input[type=button] {
   background-color: #ede9e3;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_4 p {
+  color: white;
+  font-size: 1.5  em;
+  opacity: 0.2;
 }
 
 .nav_5 {
@@ -391,6 +431,15 @@ input[type=button] {
   background-color: #ede9e3;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_5 p {
+  color: white;
+  font-size: 1.5  em;
+  opacity: 0.2;
 }
 
 .nav_6 {
@@ -399,6 +448,15 @@ input[type=button] {
   background-color: #ede9e3;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
   border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_6 p {
+  color: white;
+  font-size: 1.5  em;
+  opacity: 0.2;
 }
 
 .sticky {
@@ -500,6 +558,11 @@ h4 {
   line-height: 3em;
 }
 
+.hello_left p {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
 /* Pure CSS cake made with pride by
    %a(href="http://github.com/jaicab" target="_blank") Jaime Caballero */
 @keyframes flames {
@@ -543,6 +606,7 @@ h4 {
   border-radius: 100% / 50%;
   background: #f9f9f9;
   border-bottom: 0.25em solid #cccccc;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
 }
 
 .cake::before {
@@ -587,7 +651,8 @@ h4 {
   right: 0;
   margin: 0 auto;
   border-radius: 50% / 5%;
-  animation: candles 15s 2s infinite alternate;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  animation: candles 10s 2s infinite normal;
   background: #ffcc00;
   box-shadow: -3.5em 5em 0 0 #77DD77, 3.5em 5em 0 0 #FF6961, -7em -2.5em 0 -3px #FFB347, 7em -2.5em 0 -3px #779ECB, -10.5em 2em 0 -1px #B19CD9, 10.5em 2em 0 -1px #A5D3CA;
 }
@@ -914,29 +979,6 @@ div[class^="birthdaycake_"] {
   display: inline-block;
 }
 
-.send_cake {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: flex-end;
-  padding: 3% 7%;
-}
-
-.send_cake button {
-  width: 105px;
-  height: 35px;
-  border-radius: 5.83333px;
-  font-size: 1em;
-  background-color: white;
-  font-family: "open-sansregular", Arial, sans-serif;
-  color: #4f4f4f;
-  text-align: center;
-  border-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #topping {
   background-color: white;
   height: 500px;
@@ -946,6 +988,10 @@ div[class^="birthdaycake_"] {
   width: 900px;
   height: 400px;
   margin: 0 auto;
+}
+
+*[class^=".topping"] {
+  border: 1px solid red;
 }
 
 #dimension {
@@ -1012,37 +1058,101 @@ div[class^="birthdaycake_"] {
   border: 0.5em solid #dc4b4b;
 }
 
-.summary {
-  height: 720px;
-}
-
-*[class^="summary_"] {
-  border: 1px solid red;
-}
-
 .summary_container {
   width: 900px;
   height: auto;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .summary_form {
-  width: 60%;
+  width: 50%;
   height: 450px;
   float: left;
 }
 
-.summary_price {
-  width: 40%;
+.summary_inputs {
+  width: 50%;
   height: 450px;
   float: left;
+  padding: 0.5em;
 }
 
 .summary_button {
   width: 100%;
   height: 100px;
   clear: both;
+}
+
+.table {
+  box-sizing: border-box;
+  width: 90%;
+  height: 90%;
+  padding: 0.5em;
+  margin: 0.5em;
+  vertical-align: middle;
+}
+
+.table td {
+  vertical-align: middle;
+  padding: 0.5em;
+  border-bottom: 1px solid #4f4f4f;
+}
+
+.table td:last-child {
+  width: 20%;
+}
+
+.table_layers {
+  width: 100%;
+  height: 50px;
+}
+
+.table_layers td {
+  border: 2px solid white;
+  padding: 0.2em;
+}
+
+.table_layers td:last-child {
+  width: 90%;
+  border: 2px solid white;
+}
+
+#form_size, #form_topping, #form_layers {
+  font-family: open_sansbold;
+  vertical-align: bottom;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 90%;
+  height: 90%;
+  padding: 0.5em;
+  margin: 0.5em;
+  vertical-align: middle;
+}
+
+.input td:first-child {
+  width: 30%;
+  font-family: "open_sansbold";
+}
+
+.send_button {
+  width: 140px;
+  height: 52.5px;
+  border-radius: 5.83333px;
+  font-size: 1em;
+  background-color: white;
+  font-family: "open-sansregular", Arial, sans-serif;
+  color: #4f4f4f;
+  text-align: center;
+  border-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  float: right;
+  font-size: 2em;
+  background-color: #dc4b4b;
 }
 
 #contact {

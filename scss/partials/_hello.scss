@@ -24,7 +24,10 @@
 h4 {
   line-height: 3em;
 }
-
+.hello_left p {
+  font-size: 2em;
+  line-height: 1.5em;
+}
 
 /* Pure CSS cake made with pride by
    %a(href="http://github.com/jaicab" target="_blank") Jaime Caballero */
@@ -96,6 +99,7 @@ $cake-layers: 3;
   border-radius: 100% / 50%;
   background: $cake-color;
   border-bottom: 0.25em solid darken($color-chocolate, 20%);
+  box-shadow: $cakeShadow;
 
   //top
   &::before{
@@ -147,8 +151,9 @@ $cake-layers: 3;
   left: 0; right: 0;
   margin: 0 auto;
   border-radius: 50% / 5%;
+  box-shadow: $cakeShadow;
 
-  animation: candles 15s 2s infinite alternate;
+  animation: candles 10s 2s infinite normal;
 
 
   background: $candle-color;

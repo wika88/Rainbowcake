@@ -1,6 +1,6 @@
-@mixin button($number) {
-    width: $layerHeigth*$number;
-    height: $layerHeigth;
+@mixin button($number1, $number2) {
+    width: $layerHeigth*$number1;
+    height: $layerHeigth*$number2;
     // box-shadow: $cakeShadow;
     border-radius: $layerHeigth/6;
     font-size: 1em;
@@ -12,4 +12,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin summary_tables($em){
+  box-sizing: border-box;
+  width: 90%;
+  height: 90%;
+  padding: $em;
+  margin: $em;
+  vertical-align: middle;
+
 }

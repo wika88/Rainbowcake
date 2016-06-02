@@ -7,9 +7,9 @@ function scrolling(){
     console.log("klik");
 
       var target = $( $(this).attr('href') );
-      console.log(target);
+      // console.log(target);
       var targetOffsetTop = (target.offset().top - 100) + "px";
-      console.log(targetOffsetTop);
+      // console.log(targetOffsetTop);
 
       if( target.length ) {
           event.preventDefault();
@@ -22,7 +22,7 @@ function scrolling(){
 
 scrolling();
 
-//sticky menu
+//_____STICKY MENU________________________
 
 function stickyMenu(){
 
@@ -36,8 +36,8 @@ function stickyMenu(){
 
     var position = $(this).scrollTop();
 
-    console.log(menuOffset);
-    console.log(newHeight);
+    // console.log(menuOffset);
+    // console.log(newHeight);
 
     if (position>menuOffset){
       menu.addClass("sticky");
@@ -53,8 +53,7 @@ function stickyMenu(){
 stickyMenu();
 
 
-//header - intro
-
+//_____HEADER_MENU________________________
 
 function showNav(){
   $(".header_nav").find("div").each(function(){
@@ -99,27 +98,59 @@ function showColor($num){
 
 showColor(1);
 
-// setIntro();
+//_____NAV_HOVER________________________
 
-// change cake colour
+function showNavText(){
+  $(".header_nav").find("div").each(function(){
+    $(this).on("mouseenter", function(){
+      $(this).find("p").animate({
+        opacity: 1
+      }, 500);
+    });
+    $(this).on("mouseleave", function(){
+      $(this).children().animate({
+        opacity: 0.2
+      }, 500);
+    });
+  });
+}
+
+showNavText();
+
+//_____CHANGE_LAYER_COLOR________________________
+
 
 $(".colours").find("div").each(function(){
   $(this).children().on("click", function(){
+
     var whichLayer = $(this).parent().data("layer");
     var whichColor = $(this).css("background-color");
+    var whichCell = $(this).parent().data("cell");
+
     console.log(whichLayer);
     console.log(whichColor);
+    console.log(whichCell);
+
     $(whichLayer).css("background-color", whichColor);
+    if (whichColor != "rgb(240, 214, 107)"){
+      $(whichCell).css("background-color", whichColor);
+    } else {
+      $(whichCell).css("background-color", "white");
+    }
   });
 });
 
-// change number of layers
+// function fillFormLayers(){
+//   $(".table_layers").find("td:last-child").css("background-color", whichColor);
+// }
+
+//_____CHANGE_NUMBER_OF_LAYERS________________________
 
 function addRemoveLayer(){
 
   var i = 0;
 
-  // adding layer
+//......add_layer........................
   $(".add_layer_button").on("click", function(){
 
     if ((i<=3)&&(i>0)){
@@ -130,11 +161,16 @@ function addRemoveLayer(){
       var cakeHeight = parseInt(layer.parent().outerHeight());
       var layerMarginTop = parseInt($(".layer_6").css("margin-top"));
       var newHeight = cakeHeight + layerHeight + layerMarginTop + "px";
+      var whichFormCell = $(layer).data("cell");
+
 
       console.log(i);
       console.log("plus");
       console.log(layer);
       console.log(colorBar);
+      console.log(whichFormCell);
+
+      $(whichFormCell).css("opacity", 1);
 
       colorBar.fadeIn();
 
@@ -154,7 +190,7 @@ function addRemoveLayer(){
     }
   });
 
-  // removing layer
+//......removing_layer........................
   $(".remove_layer_button").on("click", function(){
 
       if ((i>=0)&&(i<3)){
@@ -163,6 +199,8 @@ function addRemoveLayer(){
         var colorBar = $(".colours").children("div").eq(i);
         var layerHeight = parseInt($(".layer_6").css("height"));
         var layerMarginTop = parseInt($(".layer_6").css("margin-top"));
+        var whichFormCell = $(layer).data("cell");
+
 
         var cakeHeight = parseInt(layer.parent().outerHeight());
         layer.parent().css("height", cakeHeight);
@@ -172,6 +210,9 @@ function addRemoveLayer(){
         console.log("minus");
         console.log(layer);
         console.log(colorBar);
+        console.log(whichFormCell);
+
+        $(whichFormCell).css("opacity", 0);
 
         layer.slideUp();
         colorBar.fadeOut();
@@ -202,7 +243,7 @@ function addRemoveLayer(){
 
 addRemoveLayer();
 
-//change cake size
+//_____CHANGE_CAKE_SIZE________________________
 
 function changeSize(){
   $(".size").each(function(){
@@ -262,7 +303,7 @@ function changeSize(){
       });
       $(this).on("click", function(){
         $(this).toggleClass("dimension_border");
-
+        fillFormSize();
         // $(this).children().css("opacity", "100");
       });
   });
@@ -270,7 +311,112 @@ function changeSize(){
 
 changeSize();
 
+//_____SUMMARY_FORM________________________
 
+
+
+//......form_size........................
+
+function fillFormSize(){
+  var size = $(".dimension_border").data("size");
+  console.log(size);
+  $("#form_size").text(size);
+}
+//_____AJAX_SEND_FORM________________________
+
+function sendForm(order){
+  $(".send_button").on("click", function(event){
+
+    var getLayer1 = $("#cell_1").css("backgroundColor");
+    var getLayer2 = $("#cell_2").css("backgroundColor");
+    var getLayer3 = $("#cell_3").css("backgroundColor");
+    var getLayer4 = $("#cell_4").css("backgroundColor");
+    var getLayer5 = $("#cell_5").css("backgroundColor");
+    var getLayer6 = $("#cell_6").css("backgroundColor");
+
+    var getTopping = $("#form_topping").text();
+
+    var getSize = $("#form_size").text();
+
+
+
+    var getFirstName = $("#firstName").val();
+    var getLastName = $("#lastName").val();
+    var getEmail = $("#email").val();
+    var getPhone = $("#phone").val();
+    var getAddress = $("#address").val();
+    var getCity = $("#city").val();
+    var getZipCode = $("#zipCode").val();
+    var getMessage = $("#message").val();
+    var getShippingSelf = $("#shippingSelf").prop("checked");
+    var getShippingPlease = $("#shippingPlease").prop("checked");
+
+
+    var newOrder = {
+
+      layer1: getLayer1,
+      layer2: getLayer2,
+      layer3: getLayer3,
+      layer4: getLayer4,
+      layer5: getLayer5,
+      layer6: getLayer6,
+
+      topping: getTopping,
+
+      size: getSize,
+
+      firstName: getFirstName,
+      lastName: getLastName,
+      email: getEmail,
+      phone: getPhone,
+      address: getAddress,
+      city: getCity,
+      zipCode: getZipCode,
+      message: getMessage,
+      shippingSelf: JSON.stringify(getShippingSelf),
+      shippingPlease: JSON.stringify(getShippingPlease)
+
+    }
+      console.log(newOrder);
+    $.ajax({
+      url: "http://localhost/Rainbow_cake/index.php",
+      type: "POST",
+      data:
+      // JSON.stringify(newOrder)
+
+      {
+        layer1: getLayer1,
+        layer2: getLayer2,
+        layer3: getLayer3,
+        layer4: getLayer4,
+        layer5: getLayer5,
+        layer6: getLayer6,
+
+        topping: getTopping,
+
+        size: getSize,
+
+        firstName: getFirstName,
+        lastName: getLastName,
+        email: getEmail,
+        phone: getPhone,
+        address: getAddress,
+        city: getCity,
+        zipCode: getZipCode,
+        message: getMessage,
+        shippingSelf: JSON.stringify(getShippingSelf),
+        shippingPlease: JSON.stringify(getShippingPlease)
+
+        }
+    }).done(function(newOrder){
+      console.log("udalo sie wyslac zamowienie");
+    }).fail(function(error){
+      console.log("error");
+    })
+  });
+};
+
+sendForm();
 
 
 });
