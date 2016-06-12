@@ -149,11 +149,15 @@ $(".colours").find("div").each(function(){
 function addRemoveLayer(){
 
   var i = 0;
+  var k = 1;
 
 //......add_layer........................
+
   $(".add_layer_button").on("click", function(){
 
-    if ((i<=3)&&(i>0)){
+    if ((i<=3)&&(i>0)&&(k===1)){
+
+      k=0;
 
       var layer = $(".layers_container").children().eq(i-1);
       var colorBar = $(".colours").children("div").eq(i-1);
@@ -179,6 +183,7 @@ function addRemoveLayer(){
       },1000, "easeOutElastic", function(){
         console.log("complete");
         layer.slideDown();
+        k=1;
       });
 
       i--;
@@ -191,9 +196,12 @@ function addRemoveLayer(){
   });
 
 //......removing_layer........................
+
   $(".remove_layer_button").on("click", function(){
 
-      if ((i>=0)&&(i<3)){
+      if ((i>=0)&&(i<3)&&(k===1)){
+
+        k = 0;
 
         var layer = $(".layers_container").children().eq(i);
         var colorBar = $(".colours").children("div").eq(i);
@@ -224,11 +232,11 @@ function addRemoveLayer(){
         //   j--;
         // }
 
-
         layer.parent().animate({
           height: newHeight
         },1000, "easeOutBounce", function(){
           console.log("complete");
+          k=1;
         });
 
         i++;
